@@ -33,7 +33,6 @@ int main()
         exit(2);
     }
     send(sock, message, sizeof(message),0);
-    cout<<endl<<"Sent"<<endl;
     close(sock);
     return 0;
 }

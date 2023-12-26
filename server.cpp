@@ -10,7 +10,7 @@
 #include <errno.h>
 #include <netdb.h>
 #define  PORT 8080
-using namespace std;
+//using namespace std;
 
 //обработчик сигнала
 volatile sig_atomic_t wasSigHup=0;
@@ -74,11 +74,11 @@ int main()
             if (errno==EINTR) //если прерван сигналом, принимаем его
             {
                 if (wasSigHup==1) //сигнал приходил
-                cout<<"sighup"<<endl;
+
                 wasSigHup=0;
                 counter++;
 
-             //   FD_CLR(sock,&fds);
+
 
             } else if (!errno) // ошибка
             {
