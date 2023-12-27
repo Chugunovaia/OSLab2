@@ -74,9 +74,10 @@ int main()
             if (errno==EINTR) //если прерван сигналом, принимаем его
             {
                 if (wasSigHup==1) //сигнал приходил
-
+                {
                 wasSigHup=0;
                 counter++;
+                }
 
 
 
